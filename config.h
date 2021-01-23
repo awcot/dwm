@@ -19,12 +19,13 @@ static const char col_accent2[]     = "#61afef";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm]  = { col_gray4, col_bg, col_gray1 },
-	[SchemeSel]   = { col_accent1, col_bg,  col_accent1  },
+	[SchemeSel]   = { col_gray4, col_accent1,  col_accent1  },
 	[SchemeTitle] = { col_gray4, col_bg,  col_bg  },
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+/* static const char *tags[] = { "", "", "", "4", "5", "6", "7", "", "" }; */
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
