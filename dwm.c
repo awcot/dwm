@@ -1126,7 +1126,7 @@ monocle(Monitor *m)
 		if (ISVISIBLE(c))
 			n++;
 	if (n > 0) /* override layout symbol */
-		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
+		snprintf(m->ltsymbol, sizeof m->ltsymbol, monocles[n-1 > 9 ? 9 : n-1]);
 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
 		resize(c, m->wx + m->gappx, m->wy + m->gappx, m->ww - (2 * c->bw) - 2*m->gappx, m->wh - (2 * c->bw) - 2*m->gappx, 0);
 }
