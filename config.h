@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -10,11 +10,11 @@ static const int vertpad            = 15;       /* vertical padding of bar */
 static const int sidepad            = 150;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Noto Sans:pixelsize=16:antialias=true:autohint=true" };
 static const char dmenufont[]       = "Noto Sans:pixelsize=16:antialias=true:autohint=true";
-static const char col_bg[]          = "#292c34";
+static const char col_bg[]          = "#004062";
 static const char col_gray1[]       = "#444444";
 static const char col_gray2[]       = "#ababab";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
+static const char col_gray4[]       = "#fafafa";
 static const char col_gray5[]       = "#abb2bf";
 static const char col_accent1[]     = "#fb617e";
 static const char col_accent2[]     = "#61afef";
@@ -67,7 +67,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_accent1, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_bg, "-sf", col_gray4, "-x", "550", "-y", "17", "-z", "1700", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *chromiumcmd[]  = { "chromium", NULL };
