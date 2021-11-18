@@ -8,8 +8,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 15;       /* vertical padding of bar */
 static const int sidepad            = 150;       /* horizontal padding of bar */
-static const char *fonts[]          = { "Noto Sans:pixelsize=16:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Noto Sans:pixelsize=16:antialias=true:autohint=true";
+static const char *fonts[]          = { "Noto Sans:pixelsize=24:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Noto Sans:pixelsize=24:antialias=true:autohint=true";
 static const char col_bg[]          = "#004062";
 static const char col_gray1[]       = "#444444";
 static const char col_gray2[]       = "#ababab";
@@ -68,6 +68,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_gray3, "-sb", col_bg, "-sf", col_gray4, "-x", "550", "-y", "17", "-z", "1700", NULL };
+static const char *roficmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *chromiumcmd[]  = { "chromium", NULL };
@@ -77,7 +78,7 @@ static const char *scratchpadcmd[] = {"s", "alacritty", "-t", "scratchpad", NULL
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = firefoxcmd } },
